@@ -2,6 +2,7 @@ import React from "react";
 import Input from "../Input";
 import styled from "styled-components";
 import { useState } from "react";
+import { livros } from "./dadosPesquisa";
 
 const PesquisaContainer = styled.section`
   text-align: center;
@@ -22,7 +23,8 @@ const Subtitulo = styled.h3`
 `;
 
 function Pesquisa() {
-  const [textoDigitado, setTextoDigitado] = useState("");
+  const [livrosPesquisados, setLivrosPesquisados] = useState([]);
+  console.log(livrosPesquisados);
 
   return (
     <PesquisaContainer>
@@ -30,9 +32,14 @@ function Pesquisa() {
       <Subtitulo>Encontre seu livro em nossa estante</Subtitulo>
       <Input
         placeholder="Pesquisar"
-        onBlur={(evento) => setTextoDigitado(evento.target.value)}
+        onBlur={(evento) => {
+          const textoDigitado = evento.target.value;
+          const resultadoPesquisa = livros.filter((livro) =>
+            livro.nome.includes(textoDigitado)
+          );
+          setLivrosPesquisados(resultadoPesquisa);
+        }}
       />
-      <p>{textoDigitado}</p>
     </PesquisaContainer>
   );
 }
