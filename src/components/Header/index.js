@@ -10,7 +10,9 @@ const HeaderContainer = styled.header`
   flex-direction: row;
   align-items: center;
   color: rgb(48, 48, 48);
+  width: 100%;
   justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
 function Header() {
