@@ -9,6 +9,7 @@ const LogoContainer = styled.div`
 
 const LogoImg = styled.img`
   margin-right: 10px;
+  width: 48px;
 `;
 
 function Logo() {
@@ -16,7 +17,7 @@ function Logo() {
     <LogoContainer>
       <LogoImg src={logo} alt="logo" className="logo-img" />
       <p>
-        <strong>b8</strong>ks
+        <strong>bu</strong>ks
       </p>
     </LogoContainer>
   );
