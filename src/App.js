@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "./components/Header";
 import Pesquisa from "./components/Pesquisa";
-import Input from "./components/Input";
 import styled from "styled-components";
 
 const AppContainer = styled.div`
