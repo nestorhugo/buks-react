@@ -1,5 +1,4 @@
 import React from "react";
-import "./style.css";
 import Logo from "../../components/Logo";
 import OpcoesMenu from "../../components/opcoes-menu";
 import IconesHeader from "../../components/icones-header";
