@@ -5,4 +5,5 @@ export const livros = [
   { nome: "Crime e Castigo", id: 2, src: livro },
   { nome: "Pele negra, máscaras brancas", id: 3, src: livro },
   { nome: "Fronteiras da Dependência", id: 4, src: livro },
+  { nome: "Tríplice Fronteira: BR-PY-AR", id: 5, src: livro },
 ];
