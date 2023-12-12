@@ -7,7 +7,7 @@ import { livros } from "./dadosPesquisa";
 const PesquisaContainer = styled.section`
   text-align: center;
   padding: 85px 0;
-  height: 270px;
+  height: 100px;
   width: 100%;
 `;
 
@@ -24,8 +24,9 @@ const Subtitulo = styled.h3`
 
 const ResultadoContainer = styled.div`
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
 `;
 
 const Resultado = styled.div`
