@@ -6,9 +6,10 @@ import { livros } from "./dadosPesquisa";
 
 const PesquisaContainer = styled.section`
   text-align: center;
-  padding: 85px 0;
+  padding: 30px 0;
   height: 100px;
   width: 100%;
+  margin-bottom: 64px;
 `;
 
 const Titulo = styled.h2`

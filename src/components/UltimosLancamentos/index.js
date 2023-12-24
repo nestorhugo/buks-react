@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import CardRecomendacao from "../cardRecomendacao";
 import { livros } from "./dadosUltimosLancamentos";
+import { Titulo } from "../Titulo";
 
 const UltimosLancamentosContainer = styled.section`
   width: 100%;
@@ -12,6 +14,7 @@ const UltimosLancamentosItem = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 32px;
 
   div {
     position: relative;
@@ -50,7 +53,9 @@ const UltimosLancamentosItem = styled.div`
 function UltimosLancamentos() {
   return (
     <UltimosLancamentosContainer>
-      <h1>Últimos Lancamentos</h1>
+      <Titulo cor="#000" fonte="24px">
+        Últimos Lançamentos
+      </Titulo>
       <UltimosLancamentosItem>
         {livros.map((livro) => (
           <div>
@@ -59,6 +64,12 @@ function UltimosLancamentos() {
           </div>
         ))}
       </UltimosLancamentosItem>
+      <CardRecomendacao
+        titulo="Você talvez se interesse..."
+        subtitulo="React: Aprenda Praticando"
+        descricao="Desenvolva aplicações web reais com uso da biblioteca React e seus módulos auxiliares"
+        imagem="https://m.media-amazon.com/images/I/61FPdlI0U2L._AC_UF1000,1000_QL80_.jpg"
+      ></CardRecomendacao>
     </UltimosLancamentosContainer>
   );
 }
