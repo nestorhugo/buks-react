@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const OpcoesMenuContainer = styled.ul`
   display: flex;
@@ -17,13 +18,15 @@ const OpcoesMenuItem = styled.li`
   font-size: 16px;
 `;
 
-const textoOpcoes = ["Categorias", "Favoritos", "Minha Estante"];
+const textoOpcoes = ["Categorias", "Favoritos", "Estante"];
 
 function OpcoesMenu() {
   return (
     <OpcoesMenuContainer>
       {textoOpcoes.map((texto) => (
-        <OpcoesMenuItem>{texto}</OpcoesMenuItem>
+        <Link to={`/${texto.toLowerCase()}`}>
+          <OpcoesMenuItem>{texto}</OpcoesMenuItem>
+        </Link>
       ))}
     </OpcoesMenuContainer>
   );
