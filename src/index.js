@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import { createGlobalStyle } from "styled-components";
-//import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -20,6 +20,14 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <GlobalStyle />
-    <App />
-  </React.StrictMode>
+    <Router>
+      <Switch>
+        <Route path="/favoritos">
+          <p>Oi!</p>
+        </Route>
+        <Route path="/" component={App} />
+      </Switch>
+    </Router>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
