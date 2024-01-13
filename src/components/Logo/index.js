@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../img/logo.svg";
 import styled from "styled-components";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 
 const LogoContainer = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ const LogoContainer = styled.div`
 
 const LogoImg = styled.img`
   margin-right: 10px;
-  width: 48px;
+  width: 120px;
 `;
 
 function Logo() {
