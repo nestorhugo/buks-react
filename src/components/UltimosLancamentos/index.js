@@ -58,7 +58,7 @@ function UltimosLancamentos() {
       </Titulo>
       <UltimosLancamentosItem>
         {livros.map((livro) => (
-          <div>
+          <div key={livro.nome}>
             <img src={livro.src} alt={livro.nome} />
             <p>{livro.nome}</p>
           </div>

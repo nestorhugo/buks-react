@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import Home from "./routes/Home";
 import Header from "./components/Header";
 import { createGlobalStyle } from "styled-components";
@@ -18,7 +18,7 @@ body {
   }
 `;
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <GlobalStyle />
@@ -29,6 +29,5 @@ root.render(
         <Route path="/" component={Home} />
       </Switch>
     </Router>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );

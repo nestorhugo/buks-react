@@ -24,7 +24,7 @@ function OpcoesMenu() {
   return (
     <OpcoesMenuContainer>
       {textoOpcoes.map((texto) => (
-        <Link to={`/${texto.toLowerCase()}`}>
+        <Link key={texto} to={`/${texto.toLowerCase()}`}>
           <OpcoesMenuItem>{texto}</OpcoesMenuItem>
         </Link>
       ))}
