@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { getFavoritos } from "../services/favoritos";
+import { Titulo } from "../components/Titulo";
 
 const AppContainer = styled.div`
   width: 100%;
@@ -11,6 +12,7 @@ const ContainerFlex = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 15px;
 `;
 
 const ResultadoContainer = styled.div`
@@ -68,6 +70,7 @@ function Favoritos() {
 
   return (
     <AppContainer>
+      <Titulo>Meus Favoritos</Titulo>
       <ContainerFlex>
         {favoritos.length !== 0
           ? favoritos.map((favorito) => (
