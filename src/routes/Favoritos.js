@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { getFavoritos } from "../services/favoritos";
+import { getFavoritos, deleteFavoritos } from "../services/favoritos";
 import { Titulo } from "../components/Titulo";
 
 const AppContainer = styled.div`
@@ -64,6 +64,12 @@ function Favoritos() {
     setFavoritos(favoritosDaAPI);
   }
 
+  async function deletarFavorito(id) {
+    await deleteFavoritos(id);
+    await fetchFavoritos();
+    alert("Livro removido dos favoritos!");
+  }
+
   useEffect(() => {
     fetchFavoritos();
   }, []);
@@ -72,19 +78,17 @@ function Favoritos() {
     <AppContainer>
       <Titulo>Meus Favoritos</Titulo>
       <ContainerFlex>
-        {favoritos.length !== 0
-          ? favoritos.map((favorito) => (
-              <div key={favorito.id}>
-                <ResultadoContainer>
-                  <CardLivro>
-                    <CardImagemLivro src={favorito.src} />
-                    <NomeDoLivro>{favorito.nome}</NomeDoLivro>
-                    <AutorLivro>{favorito.autor}</AutorLivro>
-                  </CardLivro>
-                </ResultadoContainer>
-              </div>
-            ))
-          : null}
+        {favoritos.map((favorito) => (
+          <div key={favorito.id}>
+            <ResultadoContainer>
+              <CardLivro onClick={() => deletarFavorito(favorito.id)}>
+                <CardImagemLivro src={favorito.src} />
+                <NomeDoLivro>{favorito.nome}</NomeDoLivro>
+                <AutorLivro>{favorito.autor}</AutorLivro>
+              </CardLivro>
+            </ResultadoContainer>
+          </div>
+        ))}
       </ContainerFlex>
     </AppContainer>
   );
