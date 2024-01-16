@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import styled, { createGlobalStyle } from "styled-components";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Favoritos from "./routes/Favoritos";
+import Login from "./routes/Login";
 
 const Layout = styled.div`
   display: flex;
@@ -52,6 +53,7 @@ root.render(
         <Main>
           <Routes>
             <Route path="/favoritos" element={<Favoritos />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/" element={<Home />} />
           </Routes>
         </Main>
