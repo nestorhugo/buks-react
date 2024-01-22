@@ -22,7 +22,7 @@ O projeto BUKS é uma aplicação React desenvolvida para demonstrar a integraç
 
 ```bash
 git clone https://github.com/nestorhugo/buks-react.git
-cd buks
+cd buks-react
 ```
 
 2. Instale as dependências:
